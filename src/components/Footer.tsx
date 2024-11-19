@@ -1,20 +1,11 @@
-import { Col, Container } from 'react-bootstrap';
+'use client';
 
-/** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
-const Footer = () => (
-  <footer className="mt-auto py-3 bg-light">
-    <Container>
-      <Col className="text-center">
-        Department of Information and Computer Sciences
-        <br />
-        University of Hawaii
-        <br />
-        Honolulu, HI 96822
-        <br />
-        <a href="http://ics-software-engineering.github.io/nextjs-application-template">Template Home Page</a>
-      </Col>
-    </Container>
-  </footer>
-);
-
-export default Footer;
+export default function Footer() {
+  return (
+    <footer style={{ backgroundColor: '#ADD8E6', textAlign: 'center', padding: '1rem', marginTop: '2rem' }}>
+      <p style={{ color: '#004080', margin: 0 }}>
+        © {new Date().getFullYear()} L-AI-brary. All Rights Reserved.
+      </p>
+    </footer>
+  );
+}
